@@ -1,0 +1,6 @@
+{
+  "name": "CoinSnap Bot Hub",
+  "description": "Real-time crypto & fiat converter bot with live exchange rates and mathematical expression support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
