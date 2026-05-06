@@ -10,7 +10,9 @@
       "DOM.Iterable"
     ],
     "skipLibCheck": true,
-    "moduleResolution": "bundler",
+    // "bundler" o'rniga "node" yoki "nodenext" ishlatamiz, 
+    // chunki server-side kodni kompilyatsiya qilyapmiz
+    "moduleResolution": "node", 
     "isolatedModules": true,
     "moduleDetection": "force",
     "allowJs": true,
@@ -20,7 +22,15 @@
         "./*"
       ]
     },
-    "allowImportingTsExtensions": true,
-    "noEmit": true
-  }
+    // MUHIM: Server build qilishda bular false bo'lishi kerak
+    "allowImportingTsExtensions": false, 
+    "noEmit": false, 
+    
+    // Build natijasi qayerga tushishi
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["server.ts", "src"],
+  "exclude": ["node_modules", "dist"]
 }
